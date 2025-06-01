@@ -1,5 +1,8 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 [System.Serializable]
 public class MenuConfig
@@ -31,6 +34,15 @@ public class MenuController : MonoBehaviour
     }
     void Update()
     {
+
+        if (InputUtils.EstaEmCampoDeTexto())
+            return;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Atalho R executado");
+        }
+
         foreach (var config in menus)
         {
             if (config.exibirBotao.action.WasPressedThisFrame())
