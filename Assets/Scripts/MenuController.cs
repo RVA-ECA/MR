@@ -1,14 +1,16 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using static OVRHaptics;
 
 [System.Serializable]
 public class MenuConfig
 {
     public GameObject menu;
     public InputActionProperty exibirBotao;
+    public bool comeca_Aberto;
 }
 
 public class MenuController : MonoBehaviour
@@ -22,6 +24,27 @@ public class MenuController : MonoBehaviour
         foreach (var config in menus)
         {
             config.exibirBotao.action.Enable();
+        }
+    }
+
+    //começa fechando os menus caso não começem abertos
+    private void Start()
+    {
+        foreach (var config in menus)
+        {
+            // Se o menu já estiver aberto, apenas fecha ele
+            if (config.comeca_Aberto == false)
+            {
+                config.menu.SetActive(false);
+            }
+            else
+            {
+                // Se começar aberto, posiciona o menu na frente do jogador
+                config.menu.SetActive(true);
+                config.menu.transform.position = jogador.position + jogador.forward * distanciaDoJogador;
+                config.menu.transform.LookAt(jogador.position);
+                config.menu.transform.forward *= -1;
+            }
         }
     }
 
@@ -40,18 +63,19 @@ public class MenuController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("Atalho R executado");
+            //Debug.Log("R Detectado");
         }
 
         foreach (var config in menus)
         {
             if (config.exibirBotao.action.WasPressedThisFrame())
             {
+
                 // Se o menu já estiver aberto, apenas fecha ele
                 if (config.menu.activeSelf)
                 {
                     config.menu.SetActive(false);
-                    Debug.Log($"Fechando: {config.menu.name}");
+                    //Debug.Log($"Fechando: {config.menu.name}");
                 }
                 else
                 {
@@ -68,7 +92,7 @@ public class MenuController : MonoBehaviour
                     config.menu.transform.LookAt(jogador.position);
                     config.menu.transform.forward *= -1;
 
-                    Debug.Log($"Abrindo: {config.menu.name}");
+                    //Debug.Log($"Abrindo: {config.menu.name}");
                 }
             }
         }

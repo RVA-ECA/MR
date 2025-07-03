@@ -1,8 +1,0 @@
-{
-    "linhas": [
-        { "valores": [ "ID", "Nome", "Idade", "Curso" ] },
-        { "valores": [ "001", "Ana", "22", "Engenharia" ] },
-        { "valores": [ "002", "Lucas", "24", "Arquitetura" ] },
-        { "valores": [ "003", "Bianca", "21", "Design" ] }
-    ]
-}

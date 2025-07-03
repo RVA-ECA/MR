@@ -1,0 +1,89 @@
+{
+    "clientes": [
+        {
+            "id": "CLT-001",
+            "nome": "João da Silva",
+            "dispositivos": [
+                {
+                    "tipo_memoria": "RAM",
+                    "serial_number": "RAMSN-928371",
+                    "defeito": "Falha intermitente no slot"
+                },
+                {
+                    "tipo_memoria": "SSD",
+                    "serial_number": "SSDSN-556722",
+                    "defeito": "Não reconhece no sistema"
+                }
+            ]
+        },
+        {
+            "id": "CLT-002",
+            "nome": "Maria Oliveira",
+            "dispositivos": [
+                {
+                    "tipo_memoria": "RAM",
+                    "serial_number": "RAMSN-128372",
+                    "defeito": "Erro de paridade"
+                },
+                {
+                    "tipo_memoria": "HDD",
+                    "serial_number": "HDDSN-987654",
+                    "defeito": "Ruído excessivo"
+                },
+                {
+                    "tipo_memoria": "SSD",
+                    "serial_number": "SSDSN-334455",
+                    "defeito": "Bad blocks detectados"
+                }
+            ]
+        },
+        {
+            "id": "CLT-003",
+            "nome": "Carlos Lima",
+            "dispositivos": [
+                {
+                    "tipo_memoria": "RAM",
+                    "serial_number": "RAMSN-777888",
+                    "defeito": "Frequência incorreta"
+                }
+            ]
+        },
+        {
+            "id": "CLT-004",
+            "nome": "Ana Souza",
+            "dispositivos": [
+                {
+                    "tipo_memoria": "SSD",
+                    "serial_number": "SSDSN-111222",
+                    "defeito": "Falha ao inicializar"
+                },
+                {
+                    "tipo_memoria": "RAM",
+                    "serial_number": "RAMSN-999000",
+                    "defeito": "Compatibilidade com a placa-mãe"
+                }
+            ]
+        },
+        {
+            "id": "CLT-005",
+            "nome": "Felipe Mendes",
+            "dispositivos": [
+                {
+                    "tipo_memoria": "HDD",
+                    "serial_number": "HDDSN-223344",
+                    "defeito": "Setores defeituosos"
+                },
+                {
+                    "tipo_memoria": "RAM",
+                    "serial_number": "RAMSN-554433",
+                    "defeito": "Não é detectada"
+                },
+                {
+                    "tipo_memoria": "SSD",
+                    "serial_number": "SSDSN-778899",
+                    "defeito": "Velocidade abaixo do esperado"
+                }
+            ]
+        }
+    ]
+}
