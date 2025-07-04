@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenes/Design da UI para Se\xE7\xE3o RMA (XR).unity"
+    guid: 120ca4cc058e66540acf0790eafdd946
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Tela_Login.unity
+    guid: 60ccc853fc64f0d449338d416063f5a3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9b63298c5830124489ac65e52590b459, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 71f1c06856e4b77459a644d10cd95592, type: 2}
