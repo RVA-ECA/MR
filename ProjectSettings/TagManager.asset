@@ -8,6 +8,7 @@ TagManager:
   - Indicador
   - Medio
   - Anelar
+  - Polegar
   layers:
   - Default
   - TransparentFX
